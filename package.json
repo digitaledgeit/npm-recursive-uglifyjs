@@ -1,0 +1,22 @@
+{
+  "name": "recursive-uglifyjs",
+  "version": "0.1.1",
+	"keywords": ["uglifyjs", "recursive", "minify"],
+  "description": "Recursively traverses a directory and uglifies all JavaScript files contained in the directory and its children.",
+  "author": "James Newell <james@digitaledgeit.com.au>",
+	"bugs": {
+		"url": "https://github.com/digitaledgeit/recursive-uglifyjs/issues"
+	},
+	"repository": {
+		"type" : "git",
+		"url" : "https://github.com/digitaledgeit/recursive-uglifyjs.git"
+	},
+  "dependencies": {
+	  "promise": "~4.0.0",
+    "uglify-js": "~2.4.12",
+    "readdir-on-steroids": "~0.1.0"
+  },
+  "bin": {
+    "recursive-uglifyjs": "./cli/cmd.js"
+  }
+}
