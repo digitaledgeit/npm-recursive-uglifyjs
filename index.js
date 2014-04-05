@@ -1,26 +1,18 @@
 var fs = require('fs');
 var uglify = require('uglify-js');
+var finder = require('finder-on-steroids');
 var Promise = require('promise');
 
-var readdir = Promise.denodeify(require('readdir-on-steroids'));
 var writefile = Promise.denodeify(fs.writeFile);
 
 /**
  * Uglifies all JavaScript files in a given folder
  * @param   {string} directory
+ * @return  {Promise}
  */
 function recursiveUglifyJS(directory) {
 
-	var options = {
-
-		//filter files ending in '.js'
-		filter: function(file) {
-			return file.substr(-3, 3) === '.js';
-		}
-
-	};
-
-	return readdir(directory, options).then(function(scripts) {
+	return finder(directory).files().name('*.js').find().then(function(scripts) {
 		return Promise.all(scripts.map(function(script) {
 			return writefile(script, uglify.minify(script, {}).code).then(function() {
 				console.log('Uglified '+script);
