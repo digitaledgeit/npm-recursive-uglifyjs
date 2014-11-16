@@ -1,10 +1,14 @@
 {
   "name": "recursive-uglifyjs",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "keywords": [
-    "uglifyjs",
+    "uglify",
+    "uglify-js",
     "recursive",
-    "minify"
+    "folder",
+    "directory",
+    "minify",
+    "compress"
   ],
   "description": "Recursively traverses a directory and uglifies all JavaScript files contained in the directory and its children.",
   "author": "James Newell <james@digitaledgeit.com.au>",
