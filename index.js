@@ -1,6 +1,6 @@
 var fs = require('fs');
 var debug = require('debug')('recursive-uglifyjs');
-var uglify = require('uglify-js').uglify;
+var uglify = require('uglify-js');
 var finder = require('finder-on-steroids');
 
 /**
@@ -78,7 +78,7 @@ function recursiveUglifyJS(directory, callback) {
         //minify the code
         var code;
         try {
-           code = uglify.gen_code(source);
+           code = uglify.minify(source).code;
         } catch (error) {
           return finished(file, error);
         }
