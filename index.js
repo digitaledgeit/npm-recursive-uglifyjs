@@ -78,7 +78,7 @@ function recursiveUglifyJS(directory, callback) {
         //minify the code
         var code;
         try {
-           code = uglify.minify(source, {fromString: true}).code;
+           code = uglify.minify(source).code;
         } catch (error) {
           return finished(file, error);
         }
