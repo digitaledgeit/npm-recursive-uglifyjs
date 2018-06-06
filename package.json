@@ -1,6 +1,6 @@
 {
   "name": "recursive-uglifyjs",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "keywords": [
     "uglifyjs",
     "recursive",
@@ -8,13 +8,8 @@
   ],
   "description": "Recursively traverses a directory and uglifies all JavaScript files contained in the directory and its children.",
   "author": "James Newell <james@digitaledgeit.com.au>",
-  "bugs": {
-    "url": "https://github.com/digitaledgeit/npm-recursive-uglifyjs/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/digitaledgeit/npm-recursive-uglifyjs.git"
-  },
+  "bugs": "digitaledgeit/npm-recursive-uglifyjs",
+  "repository": "digitaledgeit/npm-recursive-uglifyjs",
   "dependencies": {
     "debug": "^2.1.0",
     "finder-on-steroids": "^0.4.0",
@@ -22,5 +17,6 @@
   },
   "bin": {
     "recursive-uglifyjs": "./cli/cmd.js"
-  }
+  },
+  "license": "MIT"
 }
